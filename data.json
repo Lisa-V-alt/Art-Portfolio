@@ -1,0 +1,168 @@
+{
+    "name": "Lisa V.",
+    "landing": {
+        "title": "Hi, I'm Lisa V.",
+        "subtitles": [
+            "Full-stack developer 🌐",
+            "Cross-platform developer 📱💻",
+            "Exploring cloud ☁️",
+            "Beginner in devops ♾️",
+            "Just getting started 📈"
+        ],
+        "professionalDetails": [
+            {
+                "alt": "lisa-v",
+                "icon": "linkedin",
+                "link": "https://www.linkedin.com/in/lisa-viljoen/"
+            },
+            {
+                "alt": "lisa-v",
+                "icon": "stackoverflow",
+                "link": "https://stackoverflow.com/users/lisa-v"
+            },
+            {
+                "alt": "lisa-v",
+                "icon": "github",
+                "link": "https://https://github.com/Lisa-V-alt"
+            },
+            {
+                "alt": "Email",
+                "icon": "gmail",
+                "link": "mailto:uhm.lisav@gmail.com"
+            }
+        ]
+    },
+    "skills": {
+        "Known Languages": [
+            "Javascript",
+            "TypeScript",
+            "CSS3",
+            "C#",
+            "HTML5",
+            "MySQL",
+            "T-SQL",
+            "CSS3"
+        ],
+        "Frontend": [
+            "Angular",
+            "React",
+            "Redux",
+            "Bootstrap",
+            "Tailwind CSS",
+            "Vercel",
+            "Next.js",
+            "Figma"
+        ],
+        "Backend, Database and Cloud": [
+            "ASPNET Core",
+            ".NET Entity Framework",
+            "MongoDB",
+            "Postman",
+            "Azure DevOps",
+            {
+                "alt": "Azure",
+                "icon": "microsoftazure"
+            },
+            "Vercel",
+            "Firebase"
+        ],
+        "Mobile": [
+            {
+                "alt": "React_Native",
+                "icon": "react",
+                "backgroundColor": "#424242"
+            },
+            "Android"
+        ]
+    },
+    "projects": {
+        "baseURI": "https://api.github.com/repos/kausko/",
+        "repositories": [
+            "Portfolio",
+            "Genrealize",
+            "Discord-Google-Drive-Bot",
+            "GitHits",
+            "Mail-em",
+            "JAutoLayout"
+        ]
+    },
+    "experience": {
+        "Qualifications": [
+            {
+                "organization": "TAFE",
+                "role": "Diploma",
+                "type": "Information Technology (Advanced Programming)",
+                "startDate": "Jan 2024",
+                "endDate": "Jun 2024",
+                "city": "Mt. Druitt",
+                "state": "NSW",
+                "country": "Australia",
+                "url": "https://www.tafensw.edu.au/course-areas/information-and-communication-technology/courses/diploma-of-information-technology-advanced-programming--ICT50220-04",
+                "thumbnail": "/TAFE.jfif"
+            },
+            {
+                "organization": "TAFE",
+                "role": "Certificate IV",
+                "type": "Information Technology",
+                "startDate": "Jun 2023",
+                "endDate": "Dec 2023",
+                "city": "Hornsby",
+                "state": "NSW",
+                "country": "Australia",
+                "url": "https://www.tafensw.edu.au/course-areas/information-and-communication-technology/courses/certificate-iv-in-information-technology--ICT40120-01/",
+                "thumbnail": "/TAFE.jfif"
+            }
+        ],
+        "Other Qualifications": [
+            {
+                "organization": "North-West University",
+                "role": "Bachelors of ArtsHumanities",
+                "type": "Humanities",
+                "startDate": "2014",
+                "endDate": "2018",
+                "city": "Potchefstroom",
+                "state": "North-West",
+                "country": "South Africa",
+                "url": "https://www.linkedin.com/company/pisbieee/",
+                "thumbnail": "/NWU.jfif"
+            },
+            {
+                "organization": "North-West University",
+                "role": "Postgraduate Certificate in Education",
+                "type": "Senior and Further Education Level",
+                "startDate": "Jan 2020",
+                "endDate": "Jan 2021",
+                "city": "Potchefstroom",
+                "state": "North-West",
+                "country": "South Africa",
+                "url": "https://www.linkedin.com/company/pictoreal/",
+                "thumbnail": "/NWU.jfif"
+            }
+        ]
+    },
+    "about": {
+        "description": "Hi! ❤️ I'm a novice full-stack cross-platform app developer, passionate about merging design and development to create intuitive and powerful web applications. 😊",
+        "picture": "/profile.JPG",
+        "social": []
+    },
+    "theme": {
+        "light": {
+            "palette": {
+                "type": "light",
+                "background": {
+                    "paper": "#fff",
+                    "default": "#fafafa"
+                }
+            }
+        },
+        "dark": {
+            "palette": {
+                "type": "dark",
+                "background": {
+                    "paper": "#303030",
+                    "default": "#212121"
+                }
+            }
+        }
+    }
+}
