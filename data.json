@@ -37,10 +37,13 @@
             "Javascript",
             "TypeScript",
             "CSS3",
-            "C#",
+            "Csharp",
             "HTML5",
             "MySQL",
-            "T-SQL",
+            {
+                "alt": "T-SQL",
+                "icon": "microsoft"
+            },
             "CSS3"
         ],
         "Frontend": [
