@@ -79,10 +79,10 @@
         ]
     },
     "projects": {
-        "baseURI": "https://api.github.com/repos/kausko/",
+        "baseURI": "https://api.github.com/repos/Lisa-V-alt/",
         "repositories": [
             "Portfolio",
-            "Genrealize",
+            "2024_WebApp_BeanScene",
             "Discord-Google-Drive-Bot",
             "GitHits",
             "Mail-em",
@@ -96,7 +96,7 @@
                 "role": "Diploma",
                 "type": "Information Technology (Advanced Programming)",
                 "startDate": "Jan 2024",
-                "endDate": "Jun 2024",
+                "endDate": "Jul 2024",
                 "city": "Mt. Druitt",
                 "state": "NSW",
                 "country": "Australia",
@@ -119,14 +119,14 @@
         "Other Qualifications": [
             {
                 "organization": "North-West University",
-                "role": "Bachelors of ArtsHumanities",
+                "role": "Bachelors of Arts",
                 "type": "Humanities",
                 "startDate": "2014",
                 "endDate": "2018",
                 "city": "Potchefstroom",
                 "state": "North-West",
                 "country": "South Africa",
-                "url": "https://www.linkedin.com/company/pisbieee/",
+                "url": "https://www.nwu.ac.za/",
                 "thumbnail": "/NWU.jfif"
             },
             {
@@ -138,7 +138,7 @@
                 "city": "Potchefstroom",
                 "state": "North-West",
                 "country": "South Africa",
-                "url": "https://www.linkedin.com/company/pictoreal/",
+                "url": "https://www.nwu.ac.za/",
                 "thumbnail": "/NWU.jfif"
             }
         ]
