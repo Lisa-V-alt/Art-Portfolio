@@ -43,8 +43,7 @@
             {
                 "alt": "T-SQL",
                 "icon": "microsoft"
-            },
-            "CSS3"
+            }
         ],
         "Frontend": [
             "Angular",
@@ -57,8 +56,7 @@
             "Figma"
         ],
         "Backend, Database and Cloud": [
-            "ASPNET Core",
-            ".NET Entity Framework",
+            ".NET",
             "MongoDB",
             "Postman",
             "Azure DevOps",
