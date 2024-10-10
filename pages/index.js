@@ -8,7 +8,8 @@ import About from '../src/About';
 import data from '../data.json';
 import { darkTheme, lightTheme } from '../src/theme';
 import { Brightness4, Brightness7 } from '@material-ui/icons';
-const { name, projects } = data
+
+const { name, projects } = data;
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -17,48 +18,57 @@ const useStyles = makeStyles(theme => ({
   appBar: {
     boxShadow: "none",
   }
-}))
+}));
 
 export async function getStaticProps() {
-  const baseURI = projects.baseURI
-  const repos = projects.repositories
+  const baseURI = projects.baseURI;
+  const repos = projects.repositories;
   const reqInit = {
     headers: { 
       'Authorization': `token ${process.env.PAT}`
     }
-  }
+  };
+
+  // Fetch repository data
   const fullRepoData = await Promise.allSettled(
-    repos.map(
-      async name => {
-        const repo = await fetch(baseURI + name, reqInit).then(res => res.json());
-        const langs = await fetch(baseURI + name + "/languages", reqInit).then(res => res.json())
-        return {
-          ...repo,
-          languages: Object.getOwnPropertyNames(langs)
-        };
-      }
-    )
+    repos.map(async (name) => {
+      const repo = await fetch(baseURI + name, reqInit).then((res) => res.json());
+      const langs = await fetch(baseURI + name + "/languages", reqInit).then((res) => res.json());
+      return {
+        ...repo,
+        languages: Object.getOwnPropertyNames(langs),
+      };
+    })
   );
+
+  // Filter only successful results
+  const successfulRepos = fullRepoData
+    .filter((result) => result.status === 'fulfilled' && result.value !== null)
+    .map((result) => result.value);
+
+  // Log the fetched data
+  console.log("Fetched repositories: ", successfulRepos);
 
   return {
     props: {
-      projects: fullRepoData
+      projects: successfulRepos, // Only pass successful projects
     },
-    revalidate: 60
-  }
+    revalidate: 60, // Rebuild every 60 seconds
+  };
 }
 
+
+
 export default function Index({ projects, setTheme }) {
+  const classes = useStyles();
 
-  const classes = useStyles()
+  const trigger = useScrollTrigger({ disableHysteresis: true });
 
-  const trigger = useScrollTrigger({ disableHysteresis: true })
-
-  const theme = useTheme()
+  const theme = useTheme();
 
   const toggleTheme = useCallback(() => {
-    setTheme(theme => theme.palette.type === 'dark' ? lightTheme : darkTheme)
-  }, [setTheme])
+    setTheme(theme => theme.palette.type === 'dark' ? lightTheme : darkTheme);
+  }, [setTheme]);
 
   return (
     <div className={classes.root}>

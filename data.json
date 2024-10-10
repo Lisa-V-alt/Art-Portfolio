@@ -6,7 +6,7 @@
             "Full-stack magic in progress ✨🔮",
             "Gradually leveling up 🎮⚡",
             "Aspiring code sorceress 🧙‍♀️✨",
-            "Building the web, 1 bug at a time 🐛🚀",
+            "Building an app, 1 bug at a time 🐛🚀",
             "Doodling new ideas 🎨💡",
             "Turning caffeine into code ☕💻",
             "Building castles in the cloud ☁️🏰",
@@ -14,12 +14,12 @@
         ],
         "professionalDetails": [
             {
-                "alt": "lisa-v",
+                "alt": "LinkedIn: lisa-viljoen",
                 "icon": "linkedin",
                 "link": "https://www.linkedin.com/in/lisa-viljoen/"
             },
             {
-                "alt": "My Art Page",
+                "alt": "check out my insta art profile",
                 "icon": "instagram",
                 "link": "https://www.instagram.com/_bubblerat/"
             },
@@ -82,12 +82,12 @@
     "projects": {
         "baseURI": "https://api.github.com/repos/Lisa-V-alt/",
         "repositories": [
-            "Portfolio",
+            "2024_React_TicTacToe",
             "2024_WebApp_BeanScene",
-            "Discord-Google-Drive-Bot",
-            "GitHits",
-            "Mail-em",
-            "JAutoLayout"
+            "2024_BeanScene_MobileApp",
+            "2024_React_FoodOrderingApp",
+            "2024_ProjectManagementApp",
+            "2024_TAFC"
         ]
     },
     "experience": {
