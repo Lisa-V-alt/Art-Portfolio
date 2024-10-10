@@ -98,8 +98,8 @@ export default function Landing() {
                      <img
                         src="/bubblerat.gif"
                         alt="Landing"
-                        width="900.94"
-                        height="787"
+                        width="900"
+                        height="900"
                      />
                   </Grid>
                </Fade>
