@@ -1,6 +1,5 @@
 import { Card, CardActionArea, CardActions, CardContent, CardHeader, Chip, Fade, Grid, Hidden, makeStyles, Typography } from "@material-ui/core";
 import { RepoForkedIcon, RepoIcon, StarIcon } from '@primer/octicons-react';
-import Image from 'next/image'
 import { useRef } from "react";
 import useAnimate from "./useAnimate";
 
@@ -13,7 +12,6 @@ const useStyles = makeStyles(theme => ({
     },
     cardActionArea: {
         height: '100%',
-        // display: 'grid'
     }
 }))
 
@@ -30,20 +28,28 @@ export default function Projects({ data }) {
                 <Typography variant="h2" gutterBottom align="center" innerRef={animRef}>
                     Projects
                 </Typography>
+                
+                {/* Only display 3D model on larger screens */}
                 <Hidden mdDown>
-                    <Fade in={animate} style={{ transitionDelay: '250ms' }}>
-                        <div>
-                            <Image
-                                alt="Projects"
-                                src="/projects.svg"
-                                width="1144"
-                                height="617.32"
-                            />
-                        </div>
-                    </Fade>
-                </Hidden>
+              <Fade in={animate} style={{ transitionDelay: '250ms' }}>
+                <div>
+                <model-viewer
+                  src="/keyboard.glb"
+                  alt="A 3D model of a keyboard"
+                  auto-rotate
+                  camera-controls 
+                  disable-zoom
+                  style={{ width: '600px', height: '600px' }}
+                >
+                </model-viewer>
+                </div>
+              </Fade>
+            </Hidden>
+
             </Grid>
+
             <Grid container item xs={12} lg={6} direction="row" spacing={1}>
+                {/* Render the project cards */}
                 {
                     !!data && data.map((v, i) =>
                         <Grid item sm={6} xs={12} key={i}>
@@ -59,15 +65,13 @@ export default function Projects({ data }) {
                                             title={<><RepoIcon verticalAlign='middle' /> {v.value.name}</>}
                                             subheader={
                                                 <>
-                                                    {
-                                                        !!v.value.stargazers_count &&
+                                                    {!!v.value.stargazers_count &&
                                                         <>
                                                             <StarIcon verticalAlign='middle' />
                                                             {v.value.stargazers_count}
                                                         </>
                                                     }
-                                                    {
-                                                        !!v.value.forks &&
+                                                    {!!v.value.forks &&
                                                         <>
                                                             <RepoForkedIcon verticalAlign='middle' />
                                                             {v.value.forks}
@@ -83,18 +87,11 @@ export default function Projects({ data }) {
                                         </CardContent>
                                         <CardActions>
                                             <Grid container direction="row" spacing={1}>
-                                                {
-                                                    !!v.value.languages &&
-                                                    v.value.languages.map((lang, i) =>
-                                                        <Grid item key={i}>
-                                                            <Chip
-                                                                key={i}
-                                                                label={lang}
-                                                                size="small"
-                                                            />
-                                                        </Grid>
-                                                    )
-                                                }
+                                                {!!v.value.languages && v.value.languages.map((lang, i) =>
+                                                    <Grid item key={i}>
+                                                        <Chip key={i} label={lang} size="small" />
+                                                    </Grid>
+                                                )}
                                             </Grid>
                                         </CardActions>
                                     </CardActionArea>

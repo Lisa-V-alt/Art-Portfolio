@@ -1,8 +1,7 @@
 import { Avatar, Fade, Grid, Hidden, makeStyles, Tooltip, Typography, useMediaQuery, useTheme, Zoom } from "@material-ui/core";
 import Cancel from "@material-ui/icons/Cancel";
 import clsx from "clsx";
-import Image from 'next/image'
-import { useRef} from "react";
+import { useRef } from "react";
 import simpleIcons from 'simple-icons'
 import data from '../data.json'
 import useAnimate from "./useAnimate";
@@ -75,17 +74,21 @@ export default function Skills() {
                 <Typography variant="h2" gutterBottom align="center">
                     Skills
                 </Typography>
+                {/* Only display 3D model on larger screens */}
                 <Hidden mdDown>
-                    <Fade in={animate} style={{ transitionDelay: '100ms' }}>
-                        <div>
-                            <Image
-                                alt="Skills"
-                                src="/skill.svg"
-                                width="1139"
-                                height="655"
-                            />
-                        </div>
-                    </Fade>
+                  <Fade in={animate} style={{ transitionDelay: '100ms' }}>
+                    <div>
+                      <model-viewer
+                        src="/headset.glb"
+                        alt="A 3D model of a headset"
+                        auto-rotate
+                        camera-controls 
+                        disable-zoom
+                        style={{ width: '600px', height: '600px' }}
+                      >
+                      </model-viewer>
+                    </div>
+                  </Fade>
                 </Hidden>
             </Grid>
             <Grid container item xs={12} lg={6} direction="column" spacing={1} alignItems={align}>

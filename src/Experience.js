@@ -71,17 +71,21 @@ export default function Experience() {
                 <Typography variant="h2" gutterBottom align="center">
                     Experience
                 </Typography>
+                {/* Only display 3D model on larger screens */}
                 <Hidden mdDown>
-                    <Fade in={animate} style={{ transitionDelay: '250ms' }}>
-                        <div>
-                            <Image
-                                alt="Experience"
-                                src="/experience.svg"
-                                width="996.46"
-                                height="828.18"
-                            />
-                        </div>
-                    </Fade>
+                  <Fade in={animate} style={{ transitionDelay: '100ms' }}>
+                    <div>
+                      <model-viewer
+                        src="/gameboy.glb"
+                        alt="A 3D model of a gameboy"
+                        auto-rotate
+                        camera-controls 
+                        disable-zoom
+                        style={{ width: '600px', height: '600px' }}
+                      >
+                      </model-viewer>
+                    </div>
+                  </Fade>
                 </Hidden>
             </Grid>
             <Grid container item xs={12} lg={6} direction="column" spacing={1} alignItems={align}>

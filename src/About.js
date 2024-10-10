@@ -49,7 +49,13 @@ const useStyles = makeStyles(theme => ({
         height: theme.spacing(Math.max(dpx, 28)),
         width: theme.spacing(Math.max(dpx, 28))
     },
-    ...iobj
+    ...iobj,
+    credits: {
+        fontSize: '0.75rem', // Small font size for the credits
+        textAlign: 'center',
+        marginTop: theme.spacing(2), // Add some space above the credits
+        color: theme.palette.text.secondary, // Make the color subtle
+    }
 }))
 
 export default function About() {
@@ -91,6 +97,25 @@ export default function About() {
                 }
                 </Grid>                
             </Grid>
+
+                        {/* Tiny container for artist credits */}
+                        <Grid item xs={12}>
+                <Typography className={classes.credits}>
+                Special thanks to <a href="https://linktr.ee/rberi_/" target="_blank" rel="noopener noreferrer">Beri</a> for his 3d rendition of my workspace! 
+                </Typography>
+                <Typography className={classes.credits}>
+                <a href="https://skfb.ly/oZD9p/" target="_blank" rel="noopener noreferrer">"Headset"</a>  by Tetra is licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">Creative Commons Attribution</a>. 
+                </Typography>
+                <Typography className={classes.credits}>
+                <a href="https://skfb.ly/o9SRJ/" target="_blank" rel="noopener noreferrer">"Mechanical Keyboard - Aesthetic"</a> by M.Reslan is licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">Creative Commons Attribution</a>. 
+                </Typography>
+                <Typography className={classes.credits}>
+                <a href="https://skfb.ly/o8pBD/" target="_blank" rel="noopener noreferrer">"Gameboy"</a>  by hirairmak is licensed under <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">Creative Commons Attribution</a>. 
+                </Typography>
+            </Grid>
         </Grid>
+
+        
+
     )
 }
