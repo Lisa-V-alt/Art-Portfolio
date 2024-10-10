@@ -2,11 +2,11 @@
     "theme_color": "#000000",
     "background_color": "#000000",
     "display": "standalone",
-    "scope": "https://kaustubhodak.vercel.app/",
-    "start_url": "https://kaustubhodak.vercel.app/",
-    "name": "Kaustubh Odak",
-    "short_name": "KO",
-    "description": "Kaustubh Odak's portfolio",
+    "scope": "https://Lisa-V-alt.vercel.app/",
+    "start_url": "https://Lisa-V-alt.vercel.app/",
+    "name": "Lisa V.",
+    "short_name": "LV",
+    "description": "Lisa V's portfolio",
     "icons": [
         {
             "src": "/icon-192x192.png",
