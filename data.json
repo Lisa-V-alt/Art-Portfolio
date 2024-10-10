@@ -3,11 +3,14 @@
     "landing": {
         "title": "Hi, I'm Lisa V.",
         "subtitles": [
-            "Full-stack developer 🌐",
-            "Cross-platform developer 📱💻",
-            "Exploring cloud ☁️",
-            "Beginner in devops ♾️",
-            "Just getting started 📈"
+            "Full-stack magic in progress ✨🔮",
+            "Gradually leveling up 🎮⚡",
+            "Aspiring code sorceress 🧙‍♀️✨",
+            "Building the web, 1 bug at a time 🐛🚀",
+            "Doodling new ideas 🎨💡",
+            "Turning caffeine into code ☕💻",
+            "Building castles in the cloud ☁️🏰",
+            "On a choose-your-own adventure 🚀📖"
         ],
         "professionalDetails": [
             {
@@ -16,12 +19,12 @@
                 "link": "https://www.linkedin.com/in/lisa-viljoen/"
             },
             {
-                "alt": "lisa-v",
-                "icon": "stackoverflow",
-                "link": "https://stackoverflow.com/users/lisa-v"
+                "alt": "My Art Page",
+                "icon": "instagram",
+                "link": "https://www.instagram.com/_bubblerat/"
             },
             {
-                "alt": "lisa-v",
+                "alt": "Github: lisa-v",
                 "icon": "github",
                 "link": "https://https://github.com/Lisa-V-alt"
             },
