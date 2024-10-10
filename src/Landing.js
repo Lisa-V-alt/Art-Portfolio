@@ -1,17 +1,18 @@
 import { Avatar, Fade, Grid, Hidden, makeStyles, Tooltip, Typography, useMediaQuery, useTheme, Zoom } from "@material-ui/core";
 import ReactTyped from "react-typed";
 import clsx from "clsx";
-import simpleIcons from 'simple-icons'
-import data from '../data.json'
+import simpleIcons from 'simple-icons';
+import data from '../data.json';
 import { iconify } from "./util";
 import Cancel from "@material-ui/icons/Cancel";
-const { landing } = data
+import { useEffect, useRef } from 'react'; // <-- Use useRef hook for video control
+const { landing } = data;
 
 const professionalDetails = landing.professionalDetails.map(({ alt, icon, link }) => {
     const ic = simpleIcons.get(iconify(icon)) || {
         hex: '424242',
         component: <Cancel color="white" fontSize={36} />
-    }
+    };
     return {
         alt,
         backgroundColor: '#' + ic.hex,
@@ -20,13 +21,13 @@ const professionalDetails = landing.professionalDetails.map(({ alt, icon, link }
             <path d={ic.path} fill="white" />
         </svg>,
         link
-    }
-})
+    };
+});
 
-let iobj = {}
+let iobj = {};
 professionalDetails.forEach(({ alt, backgroundColor }) => {
-    iobj[alt] = { backgroundColor }
-})
+    iobj[alt] = { backgroundColor };
+});
 
 const useStyles = makeStyles(theme => ({
     cont: {
@@ -43,19 +44,33 @@ const useStyles = makeStyles(theme => ({
         padding: theme.spacing(2),
         boxShadow: '0 0 0 rgba(0, 0, 0, 0)', // Initially no glow
         '&:hover': {
-        transform: 'translateY(-8px) !important', // Less movement
-        boxShadow: '0 2px 8px rgba(238, 107, 255, 0.7)', // Lighter and simpler shadow
-        backgroundColor: '#2bd9f0',
+            transform: 'translateY(-8px) !important', // Less movement
+            boxShadow: '0 2px 8px rgba(238, 107, 255, 0.7)', // Lighter and simpler shadow
+            backgroundColor: '#2bd9f0',
         },
     },
     ...iobj
-}))
+}));
 
 export default function Landing() {
 
     const classes = useStyles();
     const theme = useTheme();
     const mdDown = useMediaQuery(theme.breakpoints.down('sm'));
+
+    // Use a ref to control the video element directly
+    const videoRef = useRef(null);
+
+    useEffect(() => {
+        const video = videoRef.current;
+        if (video) {
+            video.muted = true;  // Ensure it's muted for autoplay
+            video.play().catch(error => {
+                // Handle the error if autoplay is blocked
+                console.log('Autoplay was prevented:', error);
+            });
+        }
+    }, []);
 
     return (
         <Grid container justify="center" alignItems="center" className={classes.cont}>
@@ -64,7 +79,6 @@ export default function Landing() {
                     {landing.title}
                 </Typography>
                 <Typography variant={mdDown ? "h5" : "h4"} component="h2" className={classes.subtitle}>
-
                     <ReactTyped
                         strings={landing.subtitles}
                         typeSpeed={40}
@@ -72,7 +86,7 @@ export default function Landing() {
                         loop
                     />
                 </Typography>
-                <Grid container direction="row" spacing={2}>
+                <Grid container direction="row" spacing={1}>
                     {
                         professionalDetails.map(({ alt, icon, link }, i) =>
                             <Grid item key={i}>
@@ -92,19 +106,25 @@ export default function Landing() {
             </Grid>
 
             <Hidden mdDown>
-               <Fade in={true} style={{ transitionDelay: '100ms' }}>
-                  <Grid item lg={6}>
-                     <img
-                        src="/bubblerat.gif"
-                        alt="Landing"
+                <Fade in={true} style={{ transitionDelay: '100ms' }}>
+                    <Grid item lg={6}>
+                    <video
+                        ref={videoRef}
                         width="700"
                         height="700"
-                     />
-                  </Grid>
-               </Fade>
+                        muted
+                        loop
+                        playsInline
+                        autoPlay
+                        preload="auto"  // Ensure video is preloaded
+                        >
+                        <source src="/bubblerat.webm" type="video/webm" />
+                        <source src="/bubblerat.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                        </video>
+                    </Grid>
+                </Fade>
             </Hidden>
-
-
         </Grid>
-    )
+    );
 }

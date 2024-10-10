@@ -102,7 +102,7 @@
                 "state": "NSW",
                 "country": "Australia",
                 "url": "https://www.tafensw.edu.au/course-areas/information-and-communication-technology/courses/diploma-of-information-technology-advanced-programming--ICT50220-04",
-                "thumbnail": "/TAFE.jfif"
+                "thumbnail": "/TAFE.png"
             },
             {
                 "organization": "TAFE",
@@ -114,7 +114,7 @@
                 "state": "NSW",
                 "country": "Australia",
                 "url": "https://www.tafensw.edu.au/course-areas/information-and-communication-technology/courses/certificate-iv-in-information-technology--ICT40120-01/",
-                "thumbnail": "/TAFE.jfif"
+                "thumbnail": "/TAFE.png"
             }
         ],
         "Other Qualifications": [
@@ -128,7 +128,7 @@
                 "state": "North-West",
                 "country": "South Africa",
                 "url": "https://www.nwu.ac.za/",
-                "thumbnail": "/NWU.jfif"
+                "thumbnail": "/NWU.png"
             },
             {
                 "organization": "North-West University",
@@ -140,7 +140,7 @@
                 "state": "North-West",
                 "country": "South Africa",
                 "url": "https://www.nwu.ac.za/",
-                "thumbnail": "/NWU.jfif"
+                "thumbnail": "/NWU.png"
             }
         ]
     },
