@@ -27,13 +27,17 @@ body {
   #__next::before {
     content: "";
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
     width: 100vw;
-    height: 100dvh;
+
+    /* overextends past mobile browser bars */
+    height: 120vh;
+
     z-index: 0;
     background-image: url('/images/background.webp');
     background-size: cover;
-    background-position: center center;
+    background-position: top center;
     background-repeat: no-repeat;
     background-color: #1b1430;
     pointer-events: none;
