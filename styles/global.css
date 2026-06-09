@@ -1,15 +1,32 @@
+html,
+body,
+#__next {
+  min-height: 100%;
+}
+
 body {
-  background-image: url('/images/background.webp');
+  background-image: url('/images/background.webp') !important;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-.light-theme-overlay {
-  background: rgba(255,255,255,0.15);
+.MuiTooltip-tooltip {
+  font-size: 1.1rem !important;
+  font-family: 'IM Fell English', serif !important;
+  background-color: rgba(29, 39, 73, 0.637) !important;
+  color: #f5f0e8 !important;
+  padding: 10px 14px !important;
+}
+.light-mode {
+  min-height: 100vh;
+  background: rgba(255, 188, 241, 0.014);
+   padding-bottom: 1px;
 }
 
-.dark-theme-overlay {
-  background: rgba(20,10,35,0.55);
+.dark-mode {
+  min-height: 100vh;
+  background: rgba(10, 5, 20, 0.164);
+   padding-bottom: 1px;
 }

@@ -1,187 +1,296 @@
 {
     "name": "mothrat",
     "landing": {
-        "title": "hi, i'm mothrat! 🦋🐀",
+        "title": "hi, i'm mothrat!",
         "subtitles": [
-            "Consulting the stars ✨🔭",
+            "On a choose-your-own adventure ⚔️📖",
+            "Giving cottages more chimneys 🏡🍄",
             "Sketching moonlit creatures 🌙🦊",
-            "Filling margins with vines and flowers 🌿🌸",
+            "Filling margins with vines 🌿🌸",
             "Highlighting tiny sunbeams ☀️🎨",
             "Fattening up bunnies 🐇🌿",
+            "Adding gold to illuminated borders ✨📜",
             "Researching gnome architecture 🍄🏡",
             "Illustrating forgotten folktales 📖🍄",
-            "Convincing foxes to pose for portraits 🦊🎨",
-            "Adding unnecessary stars to the background ⭐⭐",
+            "Adding stars to the background ⭐⭐",
             "Illuminating a curious manuscript 📜✨",
-            "Colouring outside the borders on purpose 🎨🌈",
             "Making the forest 7% more magical 🌲✨",
             "Giving every mouse a tiny hat 🐭🎩",
             "Brewing tea for the village gnomes 🍵🍄",
-            "Adding gold to illuminated borders ✨📜",
-            "Putting moons on things that don't need moons 🌙",
-            "Chasing moths through moonlit gardens 🦋🌙",
+            "Chasing moths through gardens 🦋🌙",
             "Searching for lost constellations ⭐🔎",
             "Giving a new creature a happy home 🏡🐭",
-            "Accidentally creating another woodland spirit 🌿👻",
-            "Decorating the margins with mischief 🍄🦋",
-            "Writing stories for wandering heroes ⚔️📖",
-            "On a choose-your-own adventure 🚀📖"
-        ],
+            "Creating woodland spirits 🌿👻",
+            "Adding wings to rats 🐀🦋",
+            "Decorating the margins with fungi 🍄🦋",
+            "Cataloguing strange mushrooms 🍄📚",
+            "Drawing maps to nowhere 🗺️✨",
+            "Painting moonlit gardens 🌙🌸",
+            "Teaching moths astronomy 🦋⭐",
+            "Collecting shiny trinkets ✨📦",
+            "Inventing new constellations ⭐🖋️",
+            "Drawing beetles in armour 🪲⚔️",
+            "Naming unnamed creatures 🐭📜",
+            "Adding moons to icons 🌙🎨",
+            "Studying fairy footprints 🧚🌿",
+            "Designing enchanted postcards ✉️✨",
+            "Tending the moon garden 🌙🌱",
+            "Illustrating curious field guides 📖🦋",
+            "Recording folklore sightings 🍄📚",
+            "Searching for tiny dragons 🐉🔎",
+            "Following rabbit trails 🐇🌿"
+          ],
         "professionalDetails": [
             {
-                "alt": "LinkedIn: lisa-viljoen",
-                "icon": "linkedin",
-                "link": "https://www.linkedin.com/in/lisa-viljoen/"
+                "alt": "Send me an email",
+                "icon": "email",
+                "image": "/icons/email.png",
+                "link": "mailto:mothrat.lisag@gmail.com"
             },
             {
-                "alt": "check out my insta art profile",
+                "alt": "Check out my Insta art profile",
                 "icon": "instagram",
-                "link": "https://www.instagram.com/_bubblerat/"
+                "image": "/icons/insta.png",
+                "link": "https://www.instagram.com/mothrat.illustration/"
             },
             {
-                "alt": "Github: lisa-v",
-                "icon": "github",
-                "link": "https://github.com/Lisa-V-alt"
+                "alt": "Visit my Etsy shop",
+                "icon": "etsy",
+                "image": "/icons/shop.png",
+                "link": "https://www.etsy.com/shop/mothrat"
             },
             {
-                "alt": "Email",
-                "icon": "gmail",
-                "link": "mailto:uhm.lisav@gmail.com"
+                "alt": "Buy me a coffee on Ko-fi",
+                "icon": "ko-fi",
+                "image": "/icons/kofi.png",
+                "link": "https://ko-fi.com/mothratillustrations"
             }
         ]
     },
     "skills": {
-        "Known Languages": [
-            "Javascript",
-            "TypeScript",
-            "CSS3",
-            "Csharp",
-            "HTML5",
-            "MySQL",
-            {
-                "alt": "T-SQL",
-                "icon": "microsoft"
-            }
-        ],
-        "Frontend": [
-            "Angular",
-            "React",
-            "Redux",
-            "Bootstrap",
-            "Tailwind CSS",
-            "Vercel",
-            "Next.js",
-            "Figma"
-        ],
-        "Backend, Database and Cloud": [
-            ".NET",
-            "MongoDB",
-            "Postman",
-            "Azure DevOps",
-            {
-                "alt": "Azure",
-                "icon": "microsoftazure"
-            },
-            "Vercel",
-            "Firebase"
-        ],
-        "Mobile": [
-            {
-                "alt": "React_Native",
-                "icon": "react",
-                "backgroundColor": "#424242"
-            },
-            "Android"
-        ]
+  "What I Create": [
+  {
+    "alt": "Drawings & posters of any size",
+    "image": "/icons/frame.png"
+  },
+  {
+    "alt": "Book illustrations",
+    "image": "/icons/book.png"
+  },
+  {
+    "alt": "Botanical studies",
+    "image": "/icons/flower.png"
+  },
+  {
+    "alt": "Celestial artwork & star charts",
+    "image": "/icons/startile.png"
+  },
+  {
+    "alt": "Fairy-tale environments",
+    "image": "/icons/mushroom.png"
+  },
+  {
+    "alt": "Icons, stickers & badges",
+    "image": "/icons/strawberry.png"
+  },
+    {
+    "alt": "Portraits & profile pictures",
+    "image": "/icons/portrait.png"
+  },
+  {
+    "alt": "Pet portraits",
+    "image": "/icons/cat.png"
+  },
+  {
+    "alt": "Playing card & tabletop game designs",
+    "image": "/icons/cards.png"
+  },
+  {
+    "alt": "Decorative floral motifs",
+    "image": "/icons/floral2.png"
+  },
+ {
+    "alt": "Aquatic illustrations",
+    "image": "/icons/fish.png"
+  },
+  {
+    "alt": "Recipe cards & menu designs",
+    "image": "/icons/slice.png"
+  },
+  {
+    "alt": "Illuminated manuscripts",
+    "image": "/icons/manuscript.png"
+  },
+  {
+    "alt": "Decorative borders & page embellishments",
+    "image": "/icons/heart.png"
+  },
+  {
+    "alt": "Natural history illustrations",
+    "image": "/icons/beetle.png"
+  },
+  {
+    "alt": "Logos, emblems & heraldry",
+    "image": "/icons/bee.png"
+  },
+  {
+    "alt": "Moonlit fantasy scenes",
+    "image": "/icons/moontile.png"
+  },
+  {
+    "alt": "Woodland creatures",
+    "image": "/icons/doe.png"
+  },
+  {
+    "alt": "Winged wildlife",
+    "image": "/icons/butterfly.png"
+  },
+  {
+    "alt": "Fantasy creatures",
+    "image": "/icons/monster.png"
+  }
+  ],
+  "Tools of the Trade": [
+    {
+      "alt": "Digital illustrations",
+      "image": "/icons/palette.png"
     },
-    "projects": {
-        "baseURI": "https://api.github.com/repos/Lisa-V-alt/",
-        "repositories": [
-            "2024_React_TicTacToe",
-            "2024_WebApp_BeanScene",
-            "2024_BeanScene_MobileApp",
-            "2024_React_FoodOrderingApp",
-            "2024_ProjectManagementApp",
-            "2024_TAFC"
-        ]
+    {
+      "alt": "Procreate",
+      "image": "/icons/procreate.png"
     },
-    "experience": {
-        "Qualifications": [
-            {
-                "organization": "TAFE",
-                "role": "Diploma",
-                "type": "Information Technology (Advanced Programming)",
-                "startDate": "Jan 2024",
-                "endDate": "Jul 2024",
-                "city": "Mt. Druitt",
-                "state": "NSW",
-                "country": "Australia",
-                "url": "https://www.tafensw.edu.au/course-areas/information-and-communication-technology/courses/diploma-of-information-technology-advanced-programming--ICT50220-04",
-                "thumbnail": "/TAFE.png"
-            },
-            {
-                "organization": "TAFE",
-                "role": "Certificate IV",
-                "type": "Information Technology",
-                "startDate": "Jun 2023",
-                "endDate": "Dec 2023",
-                "city": "Hornsby",
-                "state": "NSW",
-                "country": "Australia",
-                "url": "https://www.tafensw.edu.au/course-areas/information-and-communication-technology/courses/certificate-iv-in-information-technology--ICT40120-01/",
-                "thumbnail": "/TAFE.png"
-            }
-        ],
-        "Other Qualifications": [
-            {
-                "organization": "North-West University",
-                "role": "Bachelors of Arts",
-                "type": "Humanities",
-                "startDate": "2014",
-                "endDate": "2018",
-                "city": "Potchefstroom",
-                "state": "North-West",
-                "country": "South Africa",
-                "url": "https://www.nwu.ac.za/",
-                "thumbnail": "/NWU.png"
-            },
-            {
-                "organization": "North-West University",
-                "role": "Postgraduate Certificate in Education",
-                "type": "Senior and Further Education Level",
-                "startDate": "Jan 2020",
-                "endDate": "Jan 2021",
-                "city": "Potchefstroom",
-                "state": "North-West",
-                "country": "South Africa",
-                "url": "https://www.nwu.ac.za/",
-                "thumbnail": "/NWU.png"
-            }
-        ]
+    {
+      "alt": "Adobe Photoshop",
+      "image": "/icons/photoshop.png"
     },
+    {
+      "alt": "Adobe Illustrator",
+      "image": "/icons/illustrator.png"
+    }
+  ]
+},
+    "projects": [
+      {
+    "title": "Sunlit",
+    "image": "/portfolio/sun.webp",
+  "link": "https://www.instagram.com/p/DNXDkaXS7nd/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "title": "Gnome and Toad on a Journey",
+    "image": "/portfolio/gnomeandtoad.webp",
+  "link": "https://www.instagram.com/p/DS7vXfrDJFl/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "title": "Among Roses",
+    "image": "/portfolio/ratinthorns.webp",
+  "link": "https://www.instagram.com/p/DW-PFvKASrI/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "title": "Gnome and Toad just Vibing",
+    "image": "/portfolio/gnome.webp",
+  "link": "https://www.instagram.com/p/DS6xQn0jMRZ/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "title": "Silly Pals",
+    "image": "/portfolio/silly.webp",
+  "link": "https://www.instagram.com/p/DNu1Qzq5CJG/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "title": "Best Buns",
+    "image": "/portfolio/bunnies.webp",
+  "link": "https://www.instagram.com/p/DAhymq2vkJF/?utm_source=ig_web_button_share_sheet&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "title": "Christmas Card 2025",
+    "image": "/portfolio/Christmas.webp",
+  "link": "https://www.instagram.com/p/DSqHYtZjNpL/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "title": "Sanctus Georgius",
+    "image": "/portfolio/saviour.webp",
+  "link": "https://www.instagram.com/p/DV2fpi1AbNd/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "title": "Bunny in a Bear Trap",
+    "image": "/portfolio/bunnybeartrap.webp",
+  "link": "https://www.instagram.com/p/DWzuwxhAQFj/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "title": "Kittens in their Cosy Cottage",
+    "image": "/portfolio/cosy.webp",
+  "link": "https://www.instagram.com/p/DTLIh9HDHLF/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "title": "Deer in Hiding",
+    "image": "/portfolio/doe.webp",
+  "link": "https://www.instagram.com/p/DUDN0GYEl-b/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  },
+  {
+    "title": "Finding My Way",
+    "image": "/portfolio/goose.webp",
+  "link": "https://www.instagram.com/p/DTDua0kDJTF/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  }
+],
+  
     "about": {
-        "description": "Hi! ❤️ I'm a novice full-stack cross-platform app developer, passionate about merging design and development to create intuitive and powerful web applications. 😊",
-        "picture": "/profile.JPG",
-        "social": []
-    },
+  "description": "Hi! ❤️ I'm an artist based in Tasmania 🌿, where forests, wildlife, and wide open skies provide endless inspiration. My work is rooted in fantasy, folklore, nature, and the small details that make a world feel alive.\n\nI enjoy creating illustrations filled with curiosity, whimsy, and wonder ✨, though I'm equally happy to explore darker, stranger, or more mysterious themes 🌙 when a project calls for them.\n\nI'm particularly drawn to muted colour palettes, old fairy-tale books 📖, and artwork that feels weathered by time. I love decorative details, wandering vines 🌿, curious creatures 🐭, and the hidden discoveries tucked away in illuminated manuscripts and forgotten folktales."},
     "theme": {
         "light": {
-            "palette": {
-                "type": "light",
-                "background": {
-                    "paper": "#fff",
-                    "default": "#fafafa"
-                }
-            }
-        },
+  "palette": {
+    "type": "light",
+    "background": {
+  "paper": "transparent",
+  "default": "transparent"
+}
+  },
+  "typography": {
+    "fontFamily": "'IM Fell English', serif",
+    "h1": {
+      "fontFamily": "'IM Fell English SC', serif",
+      "fontWeight": 700
+    },
+    "h2": {
+      "fontFamily": "'IM Fell English SC', serif",
+      "fontWeight": 600
+    },
+    "h4": {
+      "fontFamily": "'IM Fell English', serif",
+      "fontWeight": 600
+    },
+    "h5": {
+      "fontFamily": "'IM Fell English', serif",
+      "fontWeight": 600
+    }
+  }
+},
         "dark": {
             "palette": {
                 "type": "dark",
                 "background": {
-                    "paper": "#303030",
-                    "default": "#212121"
-                }
-            }
+  "paper": "transparent",
+  "default": "transparent"
+}
+            },
+            "typography": {
+    "fontFamily": "'IM Fell English', serif",
+    "h1": {
+      "fontFamily": "'IM Fell English SC', serif",
+      "fontWeight": 700
+    },
+    "h2": {
+      "fontFamily": "'IM Fell English SC', serif",
+      "fontWeight": 600
+    },
+    "h4": {
+      "fontFamily": "'IM Fell English', serif",
+      "fontWeight": 600
+    },
+    "h5": {
+      "fontFamily": "'IM Fell English', serif",
+      "fontWeight": 600
+    }
+  }
+
         }
     }
 }

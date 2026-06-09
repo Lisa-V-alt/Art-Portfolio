@@ -1,103 +1,98 @@
-import { Card, CardActionArea, CardActions, CardContent, CardHeader, Chip, Fade, Grid, Hidden, makeStyles, Typography } from "@material-ui/core";
-import { RepoForkedIcon, RepoIcon, StarIcon } from '@primer/octicons-react';
+import {
+  Card,
+  CardActionArea,
+  CardMedia,
+  Fade,
+  Grid,
+  makeStyles,
+  Typography,
+  Tooltip
+} from "@material-ui/core";
 import { useRef } from "react";
 import useAnimate from "./useAnimate";
 
 const useStyles = makeStyles(theme => ({
-    cont: {
-        minHeight: `calc(100vh - ${theme.spacing(4)}px)`,
-    },
-    card: {
-        height: '100%'
-    },
-    cardActionArea: {
-        height: '100%',
-    }
-}))
+  cont: {
+    minHeight: `calc(100vh - ${theme.spacing(4)}px)`,
+  },
+  card: {
+  height: "100%",
+  backgroundColor: theme.palette.type === "dark"
+    ? "rgba(20, 10, 35, 0.65)"
+    : "rgba(255, 255, 255, 0.55)",
+  backdropFilter: "blur(3px)",
+},
+  cardActionArea: {
+    height: "100%",
+  },
+  media: {
+    width: "100%",
+    aspectRatio: "1 / 1",
+    objectFit: "cover",
+  },
+  tooltip: {
+  fontSize: "1.15rem",
+},
+}));
 
 export default function Projects({ data }) {
-    const classes = useStyles();
-    const animRef = useRef(null);
-    const animate = useAnimate(animRef);
-  
-    if (!data || data.length === 0) {
-      return <Typography variant="h6" align="center">No projects available at the moment.</Typography>;
-    }
-  
+  const classes = useStyles();
+  const animRef = useRef(null);
+  const animate = useAnimate(animRef);
+
+  if (!data || data.length === 0) {
     return (
-      <Grid direction="row-reverse" container justify="center" alignItems="center" spacing={10} className={classes.cont}>
-        <Grid item xs={12} lg={6}>
-          <Typography variant="h2" gutterBottom align="center" innerRef={animRef}>
-            Projects
-          </Typography>
-  
-          <Hidden mdDown>
-            <Fade in={animate} style={{ transitionDelay: '250ms' }}>
-              <div>
-                <model-viewer
-                  src="/keyboard.glb"
-                  alt="A 3D model of a keyboard"
-                  auto-rotate
-                  camera-controls
-                  disable-zoom
-                  style={{ width: '600px', height: '600px' }}
-                />
-              </div>
-            </Fade>
-          </Hidden>
-        </Grid>
-  
-        <Grid container item xs={12} lg={6} direction="row" spacing={1}>
-          {data.map((v, i) => (
-            <Grid item sm={6} xs={12} key={i}>
-              <Fade in={animate} style={{ transitionDelay: `${200 * i}ms` }}>
-                <Card key={i} className={classes.card}>
-                  <CardActionArea
-                    className={classes.cardActionArea}
-                    href={v.html_url} // Access html_url directly from v
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <CardHeader
-                      title={<><RepoIcon verticalAlign='middle' /> {v.name}</>}
-                      subheader={
-                        <>
-                          {!!v.stargazers_count && (
-                            <>
-                              <StarIcon verticalAlign='middle' />
-                              {v.stargazers_count}
-                            </>
-                          )}
-                          {!!v.forks && (
-                            <>
-                              <RepoForkedIcon verticalAlign='middle' />
-                              {v.forks}
-                            </>
-                          )}
-                        </>
-                      }
-                    />
-                    <CardContent>
-                      <Typography variant="body2" color="textSecondary" component="p">
-                        {v.description}
-                      </Typography>
-                    </CardContent>
-                    <CardActions>
-                      <Grid container direction="row" spacing={1}>
-                        {!!v.languages && v.languages.map((lang, i) => (
-                          <Grid item key={i}>
-                            <Chip key={i} label={lang} size="small" />
-                          </Grid>
-                        ))}
-                      </Grid>
-                    </CardActions>
-                  </CardActionArea>
-                </Card>
-              </Fade>
-            </Grid>
-          ))}
-        </Grid>
-      </Grid>
+      <Typography variant="h6" align="center">
+        Portfolio pieces coming soon.
+      </Typography>
     );
   }
-  
+
+  return (
+  <Grid
+    container
+    justify="center"
+    alignItems="center"
+    direction="column"
+    className={classes.cont}
+    ref={animRef}
+  >
+    <Grid item xs={12}>
+      <Typography variant="h2" gutterBottom align="center">
+        Portfolio
+      </Typography>
+    </Grid>
+
+    <Grid container item xs={12} direction="row" spacing={2} justify="center">
+      {data.map((item, i) => (
+        <Grid item sm={4} xs={12} key={i}>
+          <Fade in={animate} style={{ transitionDelay: `${200 * i}ms` }}>
+            <Card className={classes.card}>
+              <Tooltip
+  title={item.title}
+  placement="top"
+  arrow
+  classes={{ tooltip: classes.tooltip }}
+>
+  <CardActionArea
+    className={classes.cardActionArea}
+    href={item.link}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <CardMedia
+      component="img"
+      image={item.image}
+      title={item.title}
+      className={classes.media}
+    />
+  </CardActionArea>
+</Tooltip>
+            </Card>
+          </Fade>
+        </Grid>
+      ))}
+    </Grid>
+  </Grid>
+);
+}

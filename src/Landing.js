@@ -5,23 +5,23 @@ import simpleIcons from 'simple-icons';
 import data from '../data.json';
 import { iconify } from "./util";
 import Cancel from "@material-ui/icons/Cancel";
-import { useEffect, useRef } from 'react'; // <-- Use useRef hook for video control
 const { landing } = data;
 
-const professionalDetails = landing.professionalDetails.map(({ alt, icon, link }) => {
+const professionalDetails = landing.professionalDetails.map(({ alt, icon, image, link }) => {
     const ic = simpleIcons.get(iconify(icon)) || {
         hex: '424242',
         component: <Cancel color="white" fontSize={36} />
     };
     return {
-        alt,
-        backgroundColor: '#' + ic.hex,
-        icon: ic.component || <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" height="100%" width="100%" xmlnsXlink="http://www.w3.org/1999/xlink">
-            <title>{icon}</title>
-            <path d={ic.path} fill="white" />
-        </svg>,
-        link
-    };
+    alt,
+    backgroundColor: '#' + ic.hex,
+    image,
+    icon: ic.component || <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" height="100%" width="100%" xmlnsXlink="http://www.w3.org/1999/xlink">
+        <title>{icon}</title>
+        <path d={ic.path} fill="white" />
+    </svg>,
+    link
+};
 });
 
 let iobj = {};
@@ -29,6 +29,7 @@ professionalDetails.forEach(({ alt, backgroundColor }) => {
     iobj[alt] = { backgroundColor };
 });
 
+// ------------------   STYLING  -------------------
 const useStyles = makeStyles(theme => ({
     cont: {
         minHeight: `calc(100vh - ${theme.spacing(4)}px)`,
@@ -39,16 +40,29 @@ const useStyles = makeStyles(theme => ({
         marginBottom: theme.spacing(5)
     },
     avatar: {
-        height: theme.spacing(8),
-        width: theme.spacing(8),
-        padding: theme.spacing(2),
-        boxShadow: '0 0 0 rgba(0, 0, 0, 0)', // Initially no glow
-        '&:hover': {
-            transform: 'translateY(-8px) !important', // Less movement
-            boxShadow: '0 2px 8px rgba(238, 107, 255, 0.7)', // Lighter and simpler shadow
-            backgroundColor: '#2bd9f0',
-        },
-    },
+    height: theme.spacing(14),
+    width: theme.spacing(14),
+    padding: 0,
+    backgroundColor: 'transparent',
+    boxShadow: 'none',
+    overflow: 'visible',
+    '&:hover': {
+    transform: 'translateY(-4px) scale(1.03) !important',
+},
+},
+iconImage: {
+    width: '100%',
+    height: '100%',
+    objectFit: 'cover',
+    display: 'block',
+},
+featureImage: {
+    width: "100%",
+    maxWidth: "700px",
+    height: "auto",
+    display: "block",
+    margin: "0 auto",
+},
     ...iobj
 }));
 
@@ -58,44 +72,38 @@ export default function Landing() {
     const theme = useTheme();
     const mdDown = useMediaQuery(theme.breakpoints.down('sm'));
 
-    // Use a ref to control the video element directly
-    const videoRef = useRef(null);
-
-    useEffect(() => {
-        const video = videoRef.current;
-        if (video) {
-            video.muted = true;  // Ensure it's muted for autoplay
-            video.play().catch(error => {
-                // Handle the error if autoplay is blocked
-                console.log('Autoplay was prevented:', error);
-            });
-        }
-    }, []);
-
     return (
         <Grid container justify="center" alignItems="center" className={classes.cont}>
             <Grid item xs={12} lg={6}>
                 <Typography variant={mdDown ? "h2" : "h1"}>
-                    {landing.title}
-                </Typography>
-                <Typography variant={mdDown ? "h5" : "h4"} component="h2" className={classes.subtitle}>
-                    <ReactTyped
-                        strings={landing.subtitles}
-                        typeSpeed={40}
-                        backSpeed={50}
-                        loop
-                    />
-                </Typography>
+    {landing.title}
+</Typography>
+                <Typography
+    variant={mdDown ? "h5" : "h4"}
+    component="h2"
+    className={classes.subtitle}
+>
+    <ReactTyped
+        strings={landing.subtitles}
+        typeSpeed={40}
+        backSpeed={50}
+        loop
+    />
+</Typography>
                 <Grid container direction="row" spacing={1}>
                     {
-                        professionalDetails.map(({ alt, icon, link }, i) =>
+                        professionalDetails.map(({ alt, icon, image, link }, i) =>
                             <Grid item key={i}>
                                 <a href={link} target="_blank" rel="noopener noreferrer">
                                     <Zoom in={true} style={{ transitionDelay: `${100 * i}ms` }}>
                                         <Tooltip title={alt} placement="top">
-                                            <Avatar variant="rounded" className={clsx([classes.avatar, classes[alt]])}>
-                                                {icon}
-                                            </Avatar>
+                                            <Avatar variant="rounded" className={classes.avatar}>
+    {image ? (
+        <img src={image} alt={alt} className={classes.iconImage} />
+    ) : (
+        icon
+    )}
+</Avatar>
                                         </Tooltip>
                                     </Zoom>
                                 </a>
@@ -106,25 +114,16 @@ export default function Landing() {
             </Grid>
 
             <Hidden mdDown>
-                <Fade in={true} style={{ transitionDelay: '100ms' }}>
-                    <Grid item lg={6}>
-                    <video
-                        ref={videoRef}
-                        width="700"
-                        height="700"
-                        muted
-                        loop
-                        playsInline
-                        autoPlay
-                        preload="auto"  // Ensure video is preloaded
-                        >
-                        <source src="/bubblerat.webm" type="video/webm" />
-                        <source src="/bubblerat.mp4" type="video/mp4" />
-                        Your browser does not support the video tag.
-                        </video>
-                    </Grid>
-                </Fade>
-            </Hidden>
+    <Fade in={true} style={{ transitionDelay: '100ms' }}>
+        <Grid item lg={6}>
+            <img
+                src="/feature/mothrat.webp"
+                alt="Mothrat illustration"
+                className={classes.featureImage}
+            />
+        </Grid>
+    </Fade>
+</Hidden>
         </Grid>
     );
 }

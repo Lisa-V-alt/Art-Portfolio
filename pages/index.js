@@ -20,46 +20,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export async function getStaticProps() {
-  const baseURI = projects.baseURI;
-  const repos = projects.repositories;
-  const reqInit = {
-    headers: { 
-      'Authorization': `token ${process.env.PAT}`
-    }
-  };
-
-  // Fetch repository data
-  const fullRepoData = await Promise.allSettled(
-    repos.map(async (name) => {
-      const repo = await fetch(baseURI + name, reqInit).then((res) => res.json());
-      const langs = await fetch(baseURI + name + "/languages", reqInit).then((res) => res.json());
-      return {
-        ...repo,
-        languages: Object.getOwnPropertyNames(langs),
-      };
-    })
-  );
-
-  // Filter only successful results
-  const successfulRepos = fullRepoData
-    .filter((result) => result.status === 'fulfilled' && result.value !== null)
-    .map((result) => result.value);
-
-  // Log the fetched data
-  console.log("Fetched repositories: ", successfulRepos);
-
-  return {
-    props: {
-      projects: successfulRepos, // Only pass successful projects
-    },
-    revalidate: 60, // Rebuild every 60 seconds
-  };
-}
-
-
-
-export default function Index({ projects, setTheme }) {
+export default function Index({ setTheme }) {
   const classes = useStyles();
 
   const trigger = useScrollTrigger({ disableHysteresis: true });
@@ -84,12 +45,33 @@ export default function Index({ projects, setTheme }) {
       </AppBar>
       <Toolbar className={classes.toolbar} />
       <Container>
-        <Landing />
-        <Skills />
-        <Projects data={projects}/>
-        <Experience/>
-        <About/>
-      </Container>
+  <Landing />
+  <Skills />
+  <Projects data={projects}/>
+  <About/>
+  <Experience/>
+<div
+  style={{
+    textAlign: "center",
+    marginTop: "4rem",
+    marginBottom: "2rem"
+  }}
+>
+  <Typography
+    variant="body2"
+    style={{
+      display: "inline-block",
+      backgroundColor: "#263d7cb2",
+      color: "#ffd76b",
+      padding: "0.4rem 1rem",
+      borderRadius: "8px",
+      fontWeight: 600
+    }}
+  >
+    Designed, illustrated & coded by me! (mothrat) ✨🦋🐀
+  </Typography>
+</div>
+</Container>
     </div>
   );
 }
