@@ -8,8 +8,9 @@ const useStyles = makeStyles(theme => ({
     minHeight: `calc(100vh - ${theme.spacing(4)}px)`,
     alignSelf: 'center',
     justifySelf: 'center',
-     paddingTop: theme.spacing(10),
+    paddingTop: theme.spacing(10),
   },
+
   headingRow: {
     display: "flex",
     alignItems: "center",
@@ -17,11 +18,17 @@ const useStyles = makeStyles(theme => ({
     gap: theme.spacing(3),
     marginBottom: theme.spacing(3),
   },
+
   headingImage: {
     width: "250px",
     height: "250px",
     objectFit: "contain",
+
+    [theme.breakpoints.down('sm')]: {
+      display: "none",
+    },
   },
+
   description: {
     maxWidth: "900px",
     margin: "0 auto",
@@ -56,7 +63,7 @@ export default function About() {
             src="/feature/moth.webp"
             alt="Moth illustration"
             className={classes.headingImage}
-             loading="lazy"
+            loading="lazy"
           />
         </div>
 
