@@ -14,14 +14,18 @@ body {
 
 @media (max-width: 768px) {
   body {
-    background-attachment: scroll;
-    background-size: 180%;
-    background-position: center top;
+    background-image: none !important;
   }
 
-  .light-mode,
-  .dark-mode {
-    min-height: 100%;
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    background-image: url('/images/background.webp');
+    background-size: 160%;
+    background-position: center top;
+    background-repeat: no-repeat;
   }
 }
 
