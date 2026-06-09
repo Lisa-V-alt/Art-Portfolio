@@ -13,6 +13,13 @@ body {
 }
 
 @media (max-width: 768px) {
+  html,
+  body,
+  #__next {
+    min-height: 100%;
+    background-color: #1b1430;
+  }
+
   body {
     background-image: none !important;
   }
@@ -21,11 +28,14 @@ body {
     content: "";
     position: fixed;
     inset: 0;
+    width: 100vw;
+    height: 100dvh;
     z-index: -1;
     background-image: url('/images/background.webp');
-    background-size: 160%;
-    background-position: center top;
+    background-size: cover;
+    background-position: center center;
     background-repeat: no-repeat;
+    background-color: #1b1430;
   }
 }
 
