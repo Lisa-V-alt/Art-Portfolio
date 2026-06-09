@@ -56,6 +56,7 @@ export default function About() {
             src="/feature/moth.webp"
             alt="Moth illustration"
             className={classes.headingImage}
+             loading="lazy"
           />
         </div>
 

@@ -85,6 +85,7 @@ export default function Projects({ data }) {
       image={item.image}
       title={item.title}
       className={classes.media}
+       loading="lazy"
     />
   </CardActionArea>
 </Tooltip>

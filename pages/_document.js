@@ -9,6 +9,11 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en" style={{ overflowX: "hidden" }}>
         <Head>
+          <link
+  rel="preload"
+  as="image"
+  href="/images/background.webp"
+/>
           <meta charSet='utf-8' />
           {/* PWA primary color */}
           <meta name="theme-color" content="black" />

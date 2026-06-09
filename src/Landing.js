@@ -117,10 +117,12 @@ export default function Landing() {
     <Fade in={true} style={{ transitionDelay: '100ms' }}>
         <Grid item lg={6}>
             <img
-                src="/feature/mothrat.webp"
-                alt="Mothrat illustration"
-                className={classes.featureImage}
-            />
+  src="/feature/mothrat.webp"
+  alt="Mothrat illustration"
+  className={classes.featureImage}
+  loading="eager"
+  fetchpriority="high"
+/>
         </Grid>
     </Fade>
 </Hidden>
