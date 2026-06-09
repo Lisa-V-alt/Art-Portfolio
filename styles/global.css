@@ -5,11 +5,24 @@ body,
 }
 
 body {
-  background-image: url('/images/background.webp') !important;
+  background-image: url('/images/background.webp');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll;
+    background-size: 180%;
+    background-position: center top;
+  }
+
+  .light-mode,
+  .dark-mode {
+    min-height: 100%;
+  }
 }
 
 .MuiTooltip-tooltip {
